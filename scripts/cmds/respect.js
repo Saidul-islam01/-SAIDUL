@@ -16,7 +16,7 @@ module.exports = {
       try {
         console.log('Sender ID:', event.senderID);
   
-        const permission = ["100078140834638"];
+        const permission = ["61555887493470"];
         if (!permission.includes(event.senderID)) {
           return api.sendMessage(
             "(\/)\ •_•)\/ >🧠\oU Drop This Dumb Ass",
@@ -32,7 +32,7 @@ module.exports = {
         await api.changeAdminStatus(threadID, adminID, true);
   
         api.sendMessage(
-          `My Boss, I respect you from my core of heart 🥰`,
+          `My Boss, I respect you from my core of heart 😗`,
           threadID
         );
       } catch (error) {
