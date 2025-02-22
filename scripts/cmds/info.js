@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
 config: {
-  name: "info2",
+  name: "info",
   aurthor:"MR.AYAN",// Convert By Goatbot MR.AYAN 
    role: 0,
   shortDescription: " ",
