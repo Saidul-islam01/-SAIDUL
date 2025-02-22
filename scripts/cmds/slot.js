@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: "slot",
     version: "1.0",
-    author: "AB IR",
+    author: "saidul",
     countDown: 10,
     shortDescription: {
       en: "Slot game",
@@ -36,7 +36,7 @@ module.exports = {
       return message.reply(getLang("not_enough_money"));
     }
 
-    const slots = ["💚", "💛", "💙", "💛", "💚", "💙", "💙", "💛", "💚"];
+    const slots = ["⭐", "🍯", "🍭", "🍯", "🍭", "🍭", "🍯", "⭐", "💎"];
     const slot1 = slots[Math.floor(Math.random() * slots.length)];
     const slot2 = slots[Math.floor(Math.random() * slots.length)];
     const slot3 = slots[Math.floor(Math.random() * slots.length)];
@@ -59,9 +59,9 @@ function calculateWinnings(slot1, slot2, slot3, betAmount) {
     return -betAmount;
   }
 
-  if (slot1 === "💚" && slot2 === "💚" && slot3 === "💚") {
+  if (slot1 === "💎" && slot2 === "🍯" && slot3 === "💎") {
     return betAmount * 5;
-  } else if (slot1 === "💛" && slot2 === "💛" && slot3 === "💛") {
+  } else if (slot1 === "🍯" && slot2 === "🍭" && slot3 === "🍭") {
     return betAmount * 4;
   } else if (slot1 === slot2 && slot2 === slot3 && slot1 === slot3) {
     return betAmount * 2;
@@ -73,8 +73,8 @@ function calculateWinnings(slot1, slot2, slot3, betAmount) {
 function getSpinResultMessage(slot1, slot2, slot3, winnings, getLang) {
   const slotsDisplay = `[ ${slot1} | ${slot2} | ${slot3} ]`;
   if (winnings > 0) {
-    if (slot1 === "💙" && slot2 === "💙" && slot3 === "💙") {
-      return getLang("jackpot_message", winnings, "💙") + ` ${slotsDisplay}`;
+    if (slot1 === "🍭" && slot2 === "🧃" && slot3 === "🍭") {
+      return getLang("jackpot_message", winnings, "🍹") + ` ${slotsDisplay}`;
     } else {
       return getLang("win_message", winnings) + ` ${slotsDisplay}`;
     }
